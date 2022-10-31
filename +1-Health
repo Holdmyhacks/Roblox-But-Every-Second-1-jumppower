@@ -1,0 +1,108 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("every second you get +1 Jump Power Made By TOP G#0040", "DarkTheme")
+
+-- Tabs
+local Main = Window:NewTab("Main")
+local Teleport = Window:NewTab("Teleport")
+local AutoFarm = Window:NewTab("AutoFarm")
+-- Section
+local MainSection = Main:NewSection("Main")
+local TeleportSection = Teleport:NewSection("Teleport")
+local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
+-- Textbox
+MainSection:NewSlider("WalkSpeed", "Set Players WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+-- Button
+
+TeleportSection:NewButton("Badge Cowbow", "Gets Cowbow Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25.5, -29.0019913, 237.445328, -0.999974251, -3.98572126e-08, 0.00717636338, -3.99690805e-08, 1, -1.54450035e-08, -0.00717636338, -1.57314393e-08, -0.999974251)
+end)
+
+TeleportSection:NewButton("Badge Experiment", "Gets Experiment Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5953.62354, 7.24801207, -8.37837791, 0.0561078712, 1.5440218e-08, -0.998424709, -1.12329355e-08, 1, 1.48333283e-08, 0.998424709, 1.03829736e-08, 0.0561078712)
+end)
+
+TeleportSection:NewButton("Badge Arcade", "Gets Arcade Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28.1618996, -29.001976, 179.035965, 0.00369450613, -2.52199275e-08, 0.999993205, 7.45051238e-08, 1, 2.49448391e-08, -0.999993205, 7.44124549e-08, 0.00369450613)
+end)
+
+TeleportSection:NewButton("Badge Limitless Void", "Gets Limitless Void Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-175.505875, 23.8194504, 27.5852356, -0.748881519, 1.14906165e-08, -0.662703931, 7.8309661e-09, 1, 8.48968984e-09, 0.662703931, 1.16815968e-09, -0.748881519)
+end)
+
+TeleportSection:NewButton("Badge Complete Mega Tower", "Gets Complete Mega Tower Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.361721, 2623.1001, 25.5640717, 2.24113464e-05, -0.25886941, -0.965912342, -1, -2.24113464e-05, -1.719594e-05, -1.719594e-05, 0.965912342, -0.25886941)
+end)
+
+TeleportSection:NewButton("Badge Fly me to the Moon", "Gets Fly me to the Moon Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-119.231171, 1183.73535, -255.665421, 0.849849224, -4.38838654e-08, -0.527025938, 7.72714248e-09, 1, -7.0806685e-08, 0.527025938, 5.61026035e-08, 0.849849224)
+end)
+
+TeleportSection:NewButton("Badge Other Dimension", "Gets Other Dimension Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5992.36621, 61, -92.1883621, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+TeleportSection:NewButton("Badge End of ------", "Gets End of ------ Badge", function()
+    wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.29822416, -16.0019722, -62.1339798, -0.99976027, 6.75434153e-10, 0.0218949076, 5.89165494e-10, 1, -3.9465764e-09, -0.0218949076, -3.93273059e-09, -0.99976027)
+end)
+
+MainSection:NewKeybind("Keybind To Toggle The GUI", "Hide/UnHide The GUI", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
+end)
+-- toggles
+AutoFarmSection:NewToggle("AutoFarm For 1 Win", "Automatic Farms For 1 Win", function(state)
+    if state then
+        _G.Win1 = true
+        while _G.Win1 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6012.5, 2260.74731, 108.5, -0.325204313, 3.07882519e-09, -0.945643783, 2.59799716e-11, 1, 3.24686367e-09, 0.945643783, 1.03132625e-09, -0.325204313)
+            wait(4)
+        end
+    else
+        _G.Win1 = false
+        while _G.Win1 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6012.5, 2260.74731, 108.5, -0.325204313, 3.07882519e-09, -0.945643783, 2.59799716e-11, 1, 3.24686367e-09, 0.945643783, 1.03132625e-09, -0.325204313)
+            wait(4)
+        end
+    end
+end)
+
+AutoFarmSection:NewToggle("AutoFarm For 2 Win", "Automatic Farms For 2 Win", function(state)
+    if state then
+        _G.Win2 = true
+        while _G.Win2 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6010.75, 2255.1001, 106.5, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+            wait(4)
+        end
+    else
+        _G.Win2 = false
+        while _G.Win2 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6010.75, 2255.1001, 106.5, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+            wait(4)
+        end
+    end
+end)
+
+AutoFarmSection:NewToggle("AutoFarm For 4 Win", "Automatic Farms For 4 Win", function(state)
+    if state then
+        _G.Win4 = true
+        while _G.Win4 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.361721, 2623.1001, 26.5640717, 2.24113464e-05, -0.25886941, -0.965912342, -1, -2.24113464e-05, -1.719594e-05, -1.719594e-05, 0.965912342, -0.25886941)
+            wait(7.5)
+        end
+    else
+        _G.Win4 = false
+        while _G.Win4 == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.361721, 2623.1001, 26.5640717, 2.24113464e-05, -0.25886941, -0.965912342, -1, -2.24113464e-05, -1.719594e-05, -1.719594e-05, 0.965912342, -0.25886941)
+            wait(7.5)
+        end
+    end
+end)
